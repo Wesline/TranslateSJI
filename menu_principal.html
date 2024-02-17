@@ -1,0 +1,38 @@
+<!-- templates/menu_principal.html -->
+
+<form method="POST" action="{{ url_for('menu_principal') }}">
+    <label for="langue">En quelle langue est votre texte ?</label>
+    <select name="langue" id="langue">
+      <option value="fr">Français</option>
+      <option value="en">Anglais</option>
+      <option value="spa">Espagnol</option>
+      <option value="de">Allemand</option>
+      <option value="zh">Mandarin</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <label for="traduction">En quelle langue souhaitez-vous le traduire ?</label>
+    <select name="traduction" id="traduction">
+      <option value="fr">Français</option>
+      <option value="en">Anglais</option>
+      <option value="spa">Espagnol</option>
+      <option value="de">Allemand</option>
+      <option value="zh">Mandarin</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <br>
+    <label for="texte">Entrez le texte à traduire :</label>
+    <input type="text" name="texte" id="texte">
+    <br><br>
+    <input type="submit" value="Traduire">
+  </form>
+  
+  {% if texte_traduit %}
+    <div>
+      <h3>Résultat de la traduction :</h3>
+      <p>{{ texte_traduit }}</p>
+    </div>
+  {% endif %}

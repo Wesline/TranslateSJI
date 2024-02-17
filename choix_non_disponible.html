@@ -1,0 +1,20 @@
+<!-- templates/choix_non_disponible.html -->
+
+<form method="POST" action="{{ url_for('choix_non_disponible') }}">
+    <label for="choix">Sélectionnez une autre option :</label>
+    <select name="choix" id="choix">
+      <option value="1"></option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+    <br>
+    <input type="submit" value="Valider">
+  </form>
+  
+  {% if choix_effectue %}
+    <div>
+        <script src="D:\WINS\IUSJC\ING5_TMSSR\SVA\TranslateSJI\templates\menu_principal.html"></script>
+      <h3>Option sélectionnée :</h3>
+      <p>{{ choix_effectue }}</p>
+    </div>
+  {% endif %}
